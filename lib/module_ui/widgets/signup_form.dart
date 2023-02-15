@@ -61,10 +61,6 @@ class _SignUpFormState extends State<SignUpForm> {
                     style: TextStyle(fontSize: 14),
                     controller: emailController,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
-                    validator: (email) =>
-                        email != null && EmailValidator.validate(email)
-                            ? 'Enter valid a email'
-                            : null,
                     decoration: const InputDecoration(
                       icon: Icon(Icons.email),
                       labelText: 'Email',
@@ -77,9 +73,6 @@ class _SignUpFormState extends State<SignUpForm> {
                     style: TextStyle(fontSize: 14),
                     controller: passwordController,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
-                    validator: (value) => value != null && value.length < 6
-                        ? 'Enter minimum 6 characters'
-                        : null,
                     decoration: const InputDecoration(
                       icon: Icon(Icons.password),
                       labelText: 'Password',

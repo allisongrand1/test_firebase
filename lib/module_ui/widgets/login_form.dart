@@ -61,9 +61,6 @@ class _LogInFormState extends State<LogInForm> {
                       style: TextStyle(fontSize: 14),
                       controller: passwordController,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
-                      validator: (value) => value != null && value.length < 6
-                          ? 'Enter minimum 6 characters'
-                          : null,
                       decoration: const InputDecoration(
                         icon: Icon(Icons.password),
                         labelText: 'Password',
